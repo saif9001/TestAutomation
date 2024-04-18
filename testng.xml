@@ -1,0 +1,43 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+<suite name="Automation Learning" parallel="tests" thread-count="2">
+    
+    <parameter name="username" value="Saif"></parameter>
+    <parameter name="password" value="Test#123"></parameter>
+    
+    <listeners>
+<!--        <listener class-name="listeners.RetryAnalyzerListener"></listener>-->
+        <listener class-name="listeners.Listenerss"></listener>
+    </listeners>
+    
+    <test name=" First Test Suite">
+        <parameter name="browsers" value="chrome"></parameter>
+<!--        <groups>-->
+<!--            <run>-->
+<!--                <include name="Smoke Test"></include>-->
+<!--            </run>-->
+<!--        </groups>-->
+        <classes>
+            <class name="HeroKuAppTestingPractice">
+                <methods>
+                    <include name="handleCheckBox"></include>
+<!--                    <include name="handleDisappearingElement"></include>-->
+                </methods>
+            </class>
+<!--           <class name="ActionsPractice"></class>-->
+<!--           <class name="DataProvider">-->
+<!--           </class>-->
+        </classes>
+</test>
+    <test name="Second Test Suite">
+        <parameter name="browsers" value="firefox"></parameter>
+        <classes>
+            <class name="HeroKuAppTestingPractice">
+                <methods>
+                    <include name="handleCheckBox"></include>
+                    <include name="testContextMenu"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
